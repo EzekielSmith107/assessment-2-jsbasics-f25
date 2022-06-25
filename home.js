@@ -22,8 +22,7 @@
 */
 
 //CODE HERE
-
-
+const greetUser = (username) => `Welcome back, ${username}`;
 
 
 
@@ -50,8 +49,7 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-
-
+const canWeDeliver = (zipCode) => deliveryAreaZipCodes.includes(zipCode) ? "You're in our delivery zone!" : "Sorry we can't deliver to that address."
 
 /* 
     Problem 2 Continued
@@ -71,7 +69,19 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = (zipCode) => {
+    let testArray = deliveryAreaZipCodes.filter(function(zipCode) { 
+        deliveryAreaZipCodes.splice(zipCode);
+})    
 
+if(testArray === []){
+        console.log("Sorry we can't deliver to that address.");
+    } else {
+        console.log("You're in our delivery zone!");
+    }
+}
+
+canWeDeliverTwo(85205);
 
 //////////////////PROBLEM 3////////////////////
 /* 
