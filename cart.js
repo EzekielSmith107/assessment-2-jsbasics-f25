@@ -34,9 +34,8 @@ const cart = [
 ]
 
 //CODE HERE
-
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.map(element => element.price).reduce((acc, curr) => acc + curr);
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +53,10 @@ const cart = [
 */
 
 //CODE HERE
-
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    let appliedCoupon = (cartTotal * (tax + 1)) - couponValue;
+    return appliedCoupon;
+}
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,8 +79,10 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
-
+    Party Size: One property will be party size. I chose this property because I believe it will be useful to track a general curve of party sizes to help organize seating. The data type should be a number for math purposes.
+    Amount Spent: Another property is amount spent. For a restaurant, it is important to see the average bill amount for each party. The data type should be a number for easier math computation purposes. 
+    Time Stayed: Time Stayed could be an important property to track as it allows the restaurant to better understand customer demographics. This data type should also be a number (in minutes) for computation purposes. 
+    Returning Customer: Tracking if each party is a returning customer will help understand retention rates. This data type should be a boolean which is efficient for the property in question. 
 */
 
 /*
@@ -88,3 +91,9 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    partySize: 5,
+    amountSpent: 123.45,
+    timeStayed: 63,
+    returningCustomer: true,
+}
