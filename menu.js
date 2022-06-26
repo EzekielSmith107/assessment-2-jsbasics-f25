@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: "Meat Lover's",
+    price: 10.99,
+    category: "entree",
+    popularity: 3,
+    rating: 8.5,
+    tags: ["kids", "gluten-free"],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,48 @@
 */
 
 //CODE HERE
-
+const pizzaArray = [
+    {
+    name: "pepperoni",
+    price: 5.99,
+    category: "appetizer",
+    popularity: 1,
+    rating: 9.9,
+    tags: ["kids", "lunch", "buy1-get1", "classic"],
+    },
+    {
+    name: "veggie",
+    price: 9.99,
+    category: "entree",
+    popularity: 5,
+    rating: 7.5,
+    tags: ["vegan", "gluten-free", "vegetarian"],
+    },
+    {
+    name: "white",
+    price: 4.99,
+    category: "appetizer",
+    popularity: 4,
+    rating: 8,
+    tags: ["lunch", "gluten-free", "cheesy", "vegetarian"],
+    },
+    {
+    name: "meat lover's",
+    price: 10.99,
+    category: "entree",
+    popularity: 3,
+    rating: 8.5,
+    tags: ["kids", "gluten-free", "buy1-get1"],
+    },
+    {
+    name: "everything",
+    price: 11.99,
+    category: "entree",
+    popularity: 2,
+    rating: 9,
+    tags: ["family-size", "hearty", "classic"],
+    }
+    ]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,10 +154,12 @@
 */
 
 //CODE HERE
+const filteredFood = (pizza, keyToSearch, tagToFind) => {
+    return pizza.filter(pizzaArray => (pizzaArray[keyToSearch].includes(tagToFind)
+    ));
+};
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+console.log(filteredFood(pizzaArray, "tags", "classic"));
 
 //////////////////PROBLEM 5////////////////////
 /* 
