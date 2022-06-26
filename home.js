@@ -69,19 +69,24 @@ const canWeDeliver = (zipCode) => deliveryAreaZipCodes.includes(zipCode) ? "You'
 */
 
 // CODE HERE
-const canWeDeliverTwo = (zipCode) => {
-    let testArray = deliveryAreaZipCodes.filter(function(zipCode) { 
-        deliveryAreaZipCodes.splice(zipCode);
-})    
-
-if(testArray === []){
-        console.log("Sorry we can't deliver to that address.");
-    } else {
+const canWeDeliverTwo = (zipCode2) => {
+    let flag = false;
+    for(i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if(deliveryAreaZipCodes[i] === zipCode2){
+            flag = true;
+            break;
+        } else {
+            flag = false;
+        }
+    }
+    if(flag) {
         console.log("You're in our delivery zone!");
+    } else {
+        console.log("Sorry we can't deliver to that address.");
     }
 }
 
-canWeDeliverTwo(85205);
+canWeDeliverTwo(85203);
 
 //////////////////PROBLEM 3////////////////////
 /* 
