@@ -201,7 +201,16 @@ console.log(filteredFood(pizzaArray, "tags", "classic"));
 */
 
 //CODE HERE
-
+function filterByProperty(property, number, type) {
+    let filteredArray = pizzaArray.filter(function(element) {
+        if(type === "above") {
+            return property >= number;
+        } else if (type === "below") {
+            return property <= number;
+        }
+    })
+    return filteredArray;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -211,3 +220,5 @@ console.log(filteredFood(pizzaArray, "tags", "classic"));
 */
 
 //CODE HERE
+console.log(filterByProperty("price", 6, "above"));
+//Work in progress, not yet complete. 

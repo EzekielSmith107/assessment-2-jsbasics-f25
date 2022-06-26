@@ -1,0 +1,3 @@
+Creative Assembly: Creative Assembly is a development studio in England. They tend to utilize C++ and Unreal Engine in their development. 
+Riot Games: Riot has a broad number of projects in development but many of them tend to utilize Java, C++, or Python skills. Experience working with Unreal and supporting a live service-driven game is often preferred.
+Epic Games: Epic has a broad number of projects, too, but many of them hightlight needed skills in C++, Node.js, AWS, Python, and Scala.
