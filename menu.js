@@ -201,16 +201,18 @@ console.log(filteredFood(pizzaArray, "tags", "classic"));
 */
 
 //CODE HERE
-function filterByProperty(property, number, type) {
-    let filteredArray = pizzaArray.filter(function(element) {
-        if(type === "above") {
-            return property >= number;
-        } else if (type === "below") {
-            return property <= number;
-        }
-    })
-    return filteredArray;
-}
+// function filterByProperty(property, number, type) {
+//     let filteredArray = pizzaArray.filter(function(element) {
+//         if(type === "above"){
+//             return element.property >= number;
+//         } else if(type === "below") {
+//             return element.property <= number;
+//         }
+//     })
+//     return filteredArray;
+// }
+//Unable to complete
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -220,5 +222,5 @@ function filterByProperty(property, number, type) {
 */
 
 //CODE HERE
-console.log(filterByProperty("price", 6, "above"));
-//Work in progress, not yet complete. 
+// console.log(filterByProperty("price", 6, "above"));
+//Not yet complete. 
